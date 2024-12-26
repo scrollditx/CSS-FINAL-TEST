@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f1f1f1;
+}
+
+h1{
+    text-align: center;
+    margin-top: 30px;
+    text-decoration: underline;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.testimonial-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 50px 0;
+}
+
+
+.testimonial-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    flex-direction: column;
+}
+
+.testimonial-container h2 {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.testimonial-container p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: black;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.para-1{
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.testimonial-container {
+    width: 400px;
+    background-color: #fff;
+    padding: 50px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(106, 17, 203, 0.5) 0%, rgba(37, 117, 252, 0.5) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.testimonial-container:hover::before {
+    opacity: 1;
+}
+
+.testimonial-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-container h2, .testimonial-container p {
+    position: relative;
+    z-index: 1;
+}
+
+.stars {
+    position: absolute;
+    bottom: 4%;
+    right: 38%;
+    color: gold;
+    z-index: 1;
+}
